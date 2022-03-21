@@ -1,7 +1,7 @@
 ---
 title: "Introduction to R Programming"
-author: "Sana Rasheed"
-date: "May 14, 2020"
+author: "M.Usama"
+date: "not submitted yet"
 output: html_document
 ---
 
@@ -24,29 +24,28 @@ output: html_document
 
 ```{r }
 #### Start solution ####
+
+my_name <- c("U","s","a","m","a")
+my_name
+
 ```
-
-
+```{r }
+concatenated_name = my_name
+concatenated_name
+```
+```{r }
+my_sequence <- 100:120
+my_sequence
+```
+```{r }
+my_matrix <- matrix(2*1:9,3,3)
+my_matrix
+```
 ```{r }
 
+dimnames(my_matrix) <- list(c("r1","r2","r3"),c("c1","c2","c3"))
+my_matrix
 ```
-
-
-```{r }
-
-```
-
-
-```{r }
-
-```
-
-
-```{r }
-
-```
-
-
 ```{r }
 #### End solution ####
 ```
@@ -64,19 +63,16 @@ output: html_document
 
 
 ```{r }
+emp_status <- c("Employed","Unemployed","selfemployed","Employed","Unemployed","Employed","Unemployed","selfemployed","Unemployed","selfemployed")
 
 ```
-
-
 ```{r }
+table(emp_status)
 
 ```
-
-
 ```{r }
-
+unclass(emp_status)
 ```
-
 
 ```{r }
 #### End solution ####
@@ -101,23 +97,11 @@ output: html_document
 
 
 ```{r }
-
+bank_customer <- data.frame(customer_ID = c(NA,1012,1013,1014,NA),has_Account=c("No","YES","YES","YES","NO"),total_balance=c(NA,10000.0,0.0,2000.0,NA))  
+bank_customer
+                                                                          
 ```
 
-
-```{r }
-
-```
-
-
-```{r }
-
-```
-
-
-```{r }
-
-```
 
 
 ```{r }
@@ -143,31 +127,69 @@ output: html_document
 
 
 ```{r }
+numbers_100 <- c(1:100)
+prime_num <- c()
+for (i in seq_along(numbers_100)){
+  count=0
+  num=2
+  
+  if (i==1)
+  {
+    
+    next
+    
+  } 
+  else 
+  {
+    while( num <= length(numbers_100) )
+    {
+      if ( (i%%num) == 0 )
+      {
+        count <- count+1
+          
+        
+      }
+      if (count>1)
+      {
+        
+        break
+      } 
+      else{
+        if (num==length(numbers_100) && count<=1)
+        {
+          prime_num <- c(prime_num, i)
+          break
+        }
+        num <- num+1
+        
+      }
+      
+    }  
+    
+  }
+}
+prime_num
+
+
 
 ```
 
 
 ```{r }
+var <- 1
+while(TRUE)
+{
+  var<-var+1
+  if (var==10){
+    print(prime_num[10])
+    break
+  }
+}
+
 
 ```
+{r }
 
-
-```{r }
-
-```
-
-
-```{r }
-
-```
-
-
-```{r }
-
-```
-
-
-```{r }
 #### End solution ####
 ```
 
@@ -182,6 +204,16 @@ output: html_document
 
 
 ```{r }
+mat_1 <- matrix(1:9,3)
+for(i in seq_len(nrow(mat_1)))
+{
+  for(j in seq_len(ncol(mat_1)))
+    {
+      print(paste0("Element at",i,"x",j,"=",mat_1[i,j]))
+    }
+
+}
+
 
 ```
 
