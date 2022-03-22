@@ -218,25 +218,6 @@ for(i in seq_len(nrow(mat_1)))
 ```
 
 
-```{r }
-
-```
-
-
-```{r }
-
-```
-
-
-```{r }
-
-```
-
-
-```{r }
-
-```
-
 
 ```{r }
 #### End solution ####
@@ -259,6 +240,38 @@ for(i in seq_len(nrow(mat_1)))
 
 
 ```{r }
+GCD <- function(a,b)
+{
+  GCD <-1
+  
+  if(a>b)
+  {
+    small_number <- b
+  }
+  else
+  {
+    small_number <- a
+  }
+  if(!is.na(a) && !is.na(b))
+  {
+    for (i in (1:small_number))
+    {
+      if ((a%%i) == 0 && (b%%i) ==0 )
+      {
+        GCD <- i
+      }
+    }
+  Answer <- paste0("The GCD of ",a," and ",b," is= ",GCD)
+  
+  }
+  return(Answer)
+}
+
+
+GCD(56,98)
+
+
+
 
 ```
 
