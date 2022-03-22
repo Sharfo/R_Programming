@@ -268,30 +268,8 @@ GCD <- function(a,b)
 }
 
 
-GCD(56,98)
+GCD(56,98)                        #calling fuction 
 
-
-
-
-```
-
-
-```{r }
-
-```
-
-
-```{r }
-
-```
-
-
-```{r }
-
-```
-
-
-```{r }
 
 ```
 
@@ -315,25 +293,29 @@ GCD(56,98)
 
 ```{r }
 
-```
+
+#here we creat f(x,y) that defines the position of a point in first quadrant 
+#we create a function that checks, given values must be greater than zero so that first quadrant 
+#conditions meet !
 
 
-```{r }
+all_conditions_meet <- function(a,b)
+{
+  print(paste("1st  number is = ",a))
+  print(paste("2nd number is = ",b))
+  if((a >-1) && (b>-1))
+  {
+    print(TRUE)
+  }
+  else
+  {
+    print(FALSE)
+  }
+}
 
-```
 
+all_conditions_meet(8,17)
 
-```{r }
-
-```
-
-
-```{r }
-
-```
-
-
-```{r }
 
 ```
 
@@ -361,21 +343,55 @@ GCD(56,98)
 
 
 ```{r }
+matrix_1 <- matrix(1:6,2,3)
+matrix_1
+matrix_2 <- matrix(7:12,3,2)
+matrix_2
 
 ```
 
 
 ```{r }
+#   1) element wise multiplicationn
+# it is not possible because the given two matrixes must have the same order (rows = coloums)
+# so we take transpose of a matrix of matrix_2
+
+matrix_1
+matrix_2
+
+t <- t(matrix_2)    #transpose of matrix_2
+result <- matrix_1*t
+result
 
 ```
 
 
 ```{r }
+#    2) matrix multiplication
+
+result <- matrix_1%*%matrix_2
+result
 
 ```
 
 
 ```{r }
+#Write a function to find the determinant of the matrix.
+
+my_mat <- matrix(1:4,2,2)
+determinant_of_matrix <- function(a,b,c)
+{
+  my_mat1 <- matrix(a,b,c)
+  x <- my_mat1[1,1]*my_mat1[2,2]
+  y <- my_mat1[1,2]*my_mat1[2,1]
+  result <- x-y
+  return(result)
+}
+
+determinant_of_matrix(my_mat,2,2)              #determinant of matrix "my_mat"  
+
+determinant_of_matrix(c(7,2,5,4),2,2)     #determinant of random matrix of 2x2
+
 
 ```
 
