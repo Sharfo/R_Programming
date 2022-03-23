@@ -397,11 +397,6 @@ determinant_of_matrix(c(7,2,5,4),2,2)     #determinant of random matrix of 2x2
 
 
 ```{r }
-
-```
-
-
-```{r }
 #### End solution ####
 ```
 
@@ -422,27 +417,41 @@ determinant_of_matrix(c(7,2,5,4),2,2)     #determinant of random matrix of 2x2
 
 ```{r }
 
-```
+#creating variables of current date & time 
 
+curr_date <- Sys.Date()
+curr_date
+curr_time <- Sys.time()
+curr_time
 
-```{r }
-
-```
-
-
-```{r }
-
-```
-
-
-```{r }
 
 ```
 
 
 ```{r }
+#coverting them into date & time objects using appropriate functions
+
+curr_date <- as.POSIXlt(curr_date)
+names(unclass(curr_date))
+curr_time <- as.POSIXlt(curr_time)
+names(unclass(curr_time))
+
+
 
 ```
+
+
+```{r }
+
+#Print the weekday, year, second and hour using the appropriate function and variables.
+
+ curr_date$wday ; curr_date$year ; curr_date$sec ; curr_date$hour
+
+ curr_time$wday ; curr_time$year ; curr_time$sec ; curr_time$hour
+
+
+```
+
 
 
 ```{r }
@@ -462,27 +471,18 @@ determinant_of_matrix(c(7,2,5,4),2,2)     #determinant of random matrix of 2x2
 
 ```{r }
 
-```
+pk_time <- Sys.time()            #gives current time 
+pk_time1 <- as.POSIXlt(pk_time)   #store current time of pakistan in pk_time1
+GMT_time <- as.POSIXlt("2022-03-23 13:19:51",tz='GMT')   #convert pakistani time in GMT time zone
+pk_time1       #pakistan time
+GMT_time       #GMT time 
+GMT_time-pk_time1     # difference between pk & GMT time zone
 
 
-```{r }
 
-```
-
-
-```{r }
-
-```
-
-
-```{r }
 
 ```
 
-
-```{r }
-
-```
 
 
 ```{r }
